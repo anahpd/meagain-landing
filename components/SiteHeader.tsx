@@ -20,13 +20,14 @@ export function SiteHeader() {
   };
 
   return (
-    <nav>
-      <Link className="logo" href="/" style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-        <img src="/meagain_icon.png" alt="MeAgain Icon" style={{ width: "36px", height: "auto" }} />
-        <span>MeAgain</span>
-      </Link>
-      <div style={{ display: "flex", gap: "10px", alignItems: "center" }}>
-        {isHome ? (
+    <header className="site-header">
+      <nav className="site-header-nav" aria-label="Primary">
+        <Link className="logo" href="/">
+          <img src="/meagain_icon.png" alt="MeAgain Icon" style={{ width: "36px", height: "auto" }} />
+          <span>MeAgain</span>
+        </Link>
+        <div className="nav-actions">
+          {isHome ? (
           <>
             <button type="button" className="nav-cta" onClick={() => scrollTo("waitlist")}>
               Register for early access
@@ -40,7 +41,7 @@ export function SiteHeader() {
               Help shape MeAgain
             </button>
           </>
-        ) : (
+          ) : (
           <>
             <Link href="/#waitlist" className="nav-cta" style={navLinkStyle}>
               Register for early access
@@ -49,8 +50,9 @@ export function SiteHeader() {
               Home
             </Link>
           </>
-        )}
-      </div>
-    </nav>
+          )}
+        </div>
+      </nav>
+    </header>
   );
 }

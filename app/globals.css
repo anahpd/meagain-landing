@@ -141,7 +141,9 @@
 
   --px-n1: -1px;
 
-  --nav-padding-y: 1.25rem;
+  --nav-padding-y: clamp(0.8rem, 1.35vw, 1.0625rem);
+  --nav-gap: 14px;
+  --nav-gap-actions: 11px;
   --survey-other-indent: 2.35rem;
   --survey-progress-height: var(--px-6);
   --survey-choice-size: var(--px-18);
@@ -180,24 +182,56 @@ body {
   flex-direction: column;
 }
 
-nav {
-  max-width: var(--max-w-container);
-  margin: 0 auto;
-  padding: var(--nav-padding-y) var(--spacing-container-x);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* Full-width strip (flex child of body); inner nav caps width like .site */
+.site-header {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  align-self: stretch;
   border-bottom: var(--bw-hairline) solid var(--border);
 }
 
+.site-header-nav {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: var(--max-w-container);
+  margin-inline: auto;
+  padding: var(--nav-padding-y) var(--spacing-container-x);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: var(--nav-gap);
+  row-gap: var(--gap-md);
+}
+
 .logo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--gap-md);
+  min-width: 0;
+  flex-shrink: 0;
   font-size: var(--fs-22);
   font-weight: 500;
   color: var(--teal-dark);
   text-decoration: none;
 }
 
+.nav-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--nav-gap-actions);
+  min-width: 0;
+  margin-left: auto;
+  flex: 0 1 auto;
+}
+
 .nav-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: var(--teal-dark);
   color: var(--color-surface);
   border: none;
@@ -206,6 +240,7 @@ nav {
   font-size: var(--fs-13);
   cursor: pointer;
   font-family: inherit;
+  line-height: var(--lh-ui);
 }
 
 .nav-cta:hover { background: var(--color-teal-hover); }
@@ -774,10 +809,30 @@ footer a:hover { text-decoration: underline; }
   .insight-row { grid-template-columns: 1fr; }
   
   .form-row { flex-direction: column; }
-  nav {
+  .site-header-nav {
     flex-direction: column;
-    gap: var(--gap-md);
-    align-items: flex-start;
+    align-items: stretch;
+    row-gap: var(--gap-md);
+  }
+
+  .logo {
+    margin-right: 0;
+    align-self: flex-start;
+  }
+
+  .nav-actions {
+    width: 100%;
+    justify-content: flex-end;
+    flex-direction: column;
+    margin-left: 0;
+    align-items: stretch;
+    gap: var(--gap-sm);
+  }
+
+  .nav-actions .nav-cta {
+    flex: none;
+    width: 100%;
+    text-align: center;
   }
 }
 @layer utilities {
