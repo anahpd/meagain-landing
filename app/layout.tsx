@@ -17,9 +17,15 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.ico" }, 
+      // PNG first: Chromium / WebKit sometimes skip oddly-encoded ICO favicons but accept PNG.
+      {
+        url: "/meagain_icon.png",
+        type: "image/png",
+        sizes: "1024x1024",
+      },
+      { url: "/favicon.ico", sizes: "any", type: "image/x-icon" },
     ],
-    shortcut: ["/favicon.ico"],
+    shortcut: ["/meagain_icon.png"],
     apple: [{ url: "/meagain_icon.png" }],
   },
 };
