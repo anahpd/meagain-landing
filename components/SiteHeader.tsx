@@ -31,13 +31,14 @@ export function SiteHeader() {
             <button type="button" className="nav-cta" onClick={() => scrollTo("waitlist")}>
               Register for early access
             </button>
-            <Link
-              href="/survey"
+            <button
+              type="button"
               className="nav-cta"
-              style={{ ...navLinkStyle, background: "var(--coral)", color: "#fff" }}
+              onClick={() => scrollTo("survey-section")}
+              style={{ ...navLinkStyle, background: "var(--coral)", color: "#fff", border: "none", cursor: "pointer", fontFamily: "inherit" }}
             >
               Help shape MeAgain
-            </Link>
+            </button>
           </>
         ) : (
           <>
