@@ -2,6 +2,7 @@
 
 import {
   Survey,
+  SurveyIntroConsent,
   buildSurveyDbInsertRow,
   type SurveyAnswers,
   type SurveyDefinition,
@@ -14,6 +15,7 @@ const SURVEY_DEFINITION = surveyDefinition as SurveyDefinition;
 
 export default function SurveyPage() {
   const [complete, setComplete] = useState(false);
+  const [pastIntro, setPastIntro] = useState(false);
 
   const handleSurveySubmit = async (answers: SurveyAnswers) => {
     const row = buildSurveyDbInsertRow(SURVEY_DEFINITION, answers);
@@ -34,33 +36,48 @@ export default function SurveyPage() {
   return (
     <main className="survey-route">
       <div className="survey-route-inner">
-        <header className="survey-route-header">
-          <h1 className="survey-route-title">Help shape MeAgain</h1>
-          <p className="survey-route-lede">
-            Thank you for contributing. Your responses are anonymous and optional questions can be skipped.
-            Estimated time: about 5–8 minutes.
-          </p>
-        </header>
-
         {complete ? (
-          <div className="survey-route-card survey-route-card--done">
-            <p className="survey-route-done-msg">
-              Thank you — your responses were submitted successfully.
-            </p>
-            <p className="survey-route-done-sub">
-              Your input will inform support programmes for women managing early-onset menopause following breast
-              cancer treatment.
-            </p>
-          </div>
-        ) : (
-          <div className="survey-route-card">
-            <Survey
-              definition={SURVEY_DEFINITION}
-              onSubmit={handleSurveySubmit}
-              submitLabel="Submit responses"
-              className="survey-route-form"
+          <>
+            <header className="survey-route-header">
+              <h1 className="survey-route-title">Help shape MeAgain</h1>
+            </header>
+            <div className="survey-route-card survey-route-card--done">
+              <p className="survey-route-done-msg">
+                Thank you — your responses were submitted successfully.
+              </p>
+              <p className="survey-route-done-sub">
+                Your input will inform support programmes for women managing
+                early-onset menopause following breast cancer treatment.
+              </p>
+            </div>
+          </>
+        ) : !pastIntro ? (
+          <div className="survey-route-card survey-route-card--intro">
+            <SurveyIntroConsent
+              onContinue={() => {
+                setPastIntro(true);
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
             />
           </div>
+        ) : (
+          <>
+            <header className="survey-route-header">
+              <h1 className="survey-route-title">Help shape MeAgain</h1>
+              <p className="survey-route-lede">
+                Thank you for contributing. Your responses are anonymous;
+                skip any question you prefer.
+              </p>
+            </header>
+            <div className="survey-route-card">
+              <Survey
+                definition={SURVEY_DEFINITION}
+                onSubmit={handleSurveySubmit}
+                submitLabel="Submit responses"
+                className="survey-route-form"
+              />
+            </div>
+          </>
         )}
       </div>
     </main>

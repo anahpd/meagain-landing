@@ -1,4 +1,5 @@
 export { Survey, type SurveyProps } from "./Survey";
+export { SurveyIntroConsent } from "./SurveyIntroConsent";
 export type {
   MatrixMcqAnswer,
   McqMultiWithOtherAnswer,
