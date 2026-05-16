@@ -1,0 +1,702 @@
+{
+  "pages": [
+    {
+      "info": {
+        "title": "MeAgain Survey",
+        "subtitle": "Understanding the Impact of Medically\nInduced Menopause from Breast Cancer Treatment for Women in Ireland",
+        "paragraphs": [
+          {
+            "text": "MeAgain is an early-stage start-up based in Co. Dublin, focused on understanding the impact of medically induced menopause following breast cancer treatment and developing practical support for women affected. All responses are anonymous and will be used to inform service and product design only. All questions are optional. Please do not include personal identifying information in open-text answers. This is an exploratory study and does not provide medical advice."
+          },
+          {
+            "html": "<p>Your responses will directly inform the development of support programmes for women managing early-onset menopause following breast cancer treatment. If you are interested in learning more or exploring collaboration, please connect with <a href=\"https://www.linkedin.com/in/ana-d-7273b765/\" target=\"_blank\" rel=\"noopener noreferrer\">Ana Dinho on LinkedIn</a> or email: <a href=\"mailto:hello@mymeagain.ie\">hello@mymeagain.ie</a></p>"
+          }
+        ],
+        "footer": "Estimated time: 5-8 minutes"
+      },
+      "questions": []
+    },
+    {
+      "heading": "SECTION A — Your Treatment Background",
+      "questions": [
+        {
+          "id": "a1_age_symptoms_began",
+          "type": "mcq",
+          "question": "1. How old were you when menopause symptoms first began following cancer treatment?",
+          "options": [
+            "Under 35",
+            "35-40",
+            "41-45",
+            "46-50",
+            "51+"
+          ]
+        },
+        {
+          "id": "a2_treatments_received",
+          "type": "mcq",
+          "multiple": true,
+          "other": true,
+          "question": "2. Which treatments did you receive?",
+          "options": [
+            "Chemotherapy",
+            "Ovarian suppression injections",
+            "Tamoxifen",
+            "Aromatase inhibitor - Letrozole",
+            "Aromatase inhibitor - Anastrozole",
+            "Aromatase inhibitor - Exemestane",
+            "Surgical menopause (ovary removal)"
+          ]
+        },
+        {
+          "id": "a3_heard_treatment_induced_menopause",
+          "type": "mcq",
+          "question": "3. Before your diagnosis, had you ever heard of treatment-induced menopause?",
+          "options": [
+            "Yes — I was aware",
+            "I had heard of it but did not know the details",
+            "No — I had never heard of it"
+          ]
+        },
+        {
+          "id": "a4_informed_before_treatment",
+          "type": "mcq",
+          "question": "4. Before treatment started, were you clearly informed it could trigger early menopause and symptoms such as sleep disruption, anxiety, and hot flushes?",
+          "options": [
+            "Yes",
+            "Briefly mentioned",
+            "No",
+            "I do not recall"
+          ]
+        },
+        {
+          "id": "a5_prepared_for_impact",
+          "type": "mcq",
+          "question": "5. Did you feel adequately prepared for the impact of menopause symptoms before treatment started?",
+          "options": [
+            "Yes",
+            "No",
+            "Somewhat"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "SECTION B — Symptom Onset & Experience",
+      "questions": [
+        {
+          "id": "b6_symptom_speed",
+          "type": "mcq",
+          "question": "6. Roughly how quickly did menopause symptoms appear after treatment started?",
+          "options": [
+            "Immediately",
+            "2-4 weeks",
+            "1-3 months",
+            "3-6 months",
+            "More than 6 months",
+            "Not sure"
+          ]
+        },
+        {
+          "id": "b7_first_realised",
+          "type": "text",
+          "multiline": true,
+          "question": "7. When did you first realise something was not quite right? Describe briefly in your own words."
+        },
+        {
+          "id": "b8_frightening_aspect",
+          "type": "mcq",
+          "other": true,
+          "question": "8. What felt most frightening, destabilising, or unexpected about the menopause symptoms you experienced?",
+          "options": [
+            "Sudden onset / feeling it happened \"overnight\"",
+            "Not understanding what was happening to my body",
+            "Anxiety / panic / loss of emotional control",
+            "Loss of control",
+            "Feeling like I was \"not myself\" anymore",
+            "Fear that this was the \"new me\" permanently"
+          ]
+        },
+        {
+          "id": "b9_most_unsupported_stage",
+          "type": "mcq",
+          "other": true,
+          "question": "9. At what stage did you feel most unsupported in relation to menopause symptoms?",
+          "options": [
+            "During active treatment (e.g. chemotherapy)",
+            "During hormone-blocking medication (Tamoxifen, Letrozole, Anastrozole, Exemestane)",
+            "After completing active cancer treatment"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "SECTION C — Severity of Early-Onset Menopause Symptoms Following Cancer Treatment",
+      "questions": [
+        {
+          "id": "c10_emotional_psychological_symptoms",
+          "type": "rating_table",
+          "question": "10. Emotional & Psychological symptoms — rate each 0 (No impact) to 3 (Extremely severe / life-disrupting)",
+          "rows": [
+            "Anxiety",
+            "Persistent worry",
+            "Irrational fear",
+            "Intrusive/distressing thoughts",
+            "Low mood",
+            "Depression",
+            "Tearfulness",
+            "Catastrophic thinking",
+            "Rage",
+            "Panic attack"
+          ],
+          "scale": {
+            "ratings": [
+              {
+                "value": 0,
+                "label": "No impact"
+              },
+              {
+                "value": 1
+              },
+              {
+                "value": 2
+              },
+              {
+                "value": 3,
+                "label": "Extremely severe / life-disrupting"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c11_cognitive_symptoms",
+          "type": "rating_table",
+          "question": "11. Cognitive symptoms — rate each 0 (No impact) to 3 (Extremely severe / life-disrupting)",
+          "rows": [
+            "Brain fog",
+            "Difficulty concentrating",
+            "Forgetfulness",
+            "Word-finding difficulty",
+            "Reduced mental clarity"
+          ],
+          "scale": {
+            "ratings": [
+              {
+                "value": 0,
+                "label": "No impact"
+              },
+              {
+                "value": 1
+              },
+              {
+                "value": 2
+              },
+              {
+                "value": 3,
+                "label": "Extremely severe / life-disrupting"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c12_physical_symptoms",
+          "type": "rating_table",
+          "question": "12. Physical symptoms — rate each 0 (No impact) to 3 (Extremely severe / life-disrupting)",
+          "rows": [
+            "Sleep disruption",
+            "Hot flushes/night sweats",
+            "Fatigue",
+            "Joint or muscle pain",
+            "Weight changes",
+            "Tingling or numbness",
+            "Back or spinal pain",
+            "Dry eyes",
+            "Teeth and gum problems",
+            "Low libido",
+            "Vaginal dryness / discomfort"
+          ],
+          "scale": {
+            "ratings": [
+              {
+                "value": 0,
+                "label": "No impact"
+              },
+              {
+                "value": 1
+              },
+              {
+                "value": 2
+              },
+              {
+                "value": 3,
+                "label": "Extremely severe / life-disrupting"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c13_other_symptoms",
+          "type": "text",
+          "multiline": true,
+          "question": "13. Any other symptoms not listed above?",
+          "placeholder": "Optional"
+        }
+      ]
+    },
+    {
+      "heading": "SECTION D — Functional Impact",
+      "questions": [
+        {
+          "id": "d14_functional_impact_areas",
+          "type": "rating_table",
+          "question": "14. How significantly did menopause symptoms affect the following areas of your life? (0 = No impact at all | 3 = Extremely significant impact)",
+          "rows": [
+            "Ability to work",
+            "Parenting/caring responsibilities",
+            "Confidence and self-esteem",
+            "Relationships",
+            "Day-to-day functioning"
+          ],
+          "scale": {
+            "ratings": [
+              {
+                "value": 0,
+                "label": "No impact at all"
+              },
+              {
+                "value": 1
+              },
+              {
+                "value": 2
+              },
+              {
+                "value": 3,
+                "label": "Extremely significant impact"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d15_employment_impact",
+          "type": "mcq",
+          "other": true,
+          "question": "15. Have menopause symptoms from your cancer treatment affected your employment?",
+          "options": [
+            "No",
+            "Reduced working hours",
+            "Took sick leave",
+            "Took unpaid leave",
+            "Changed role",
+            "Considering leaving",
+            "Resigned",
+            "Currently on disability support",
+            "Prefer not to say",
+            "Involuntary Redundancy",
+            "Requested to work from home"
+          ]
+        },
+        {
+          "id": "d16_reduced_income",
+          "type": "mcq",
+          "question": "16. Did symptoms result in reduced income?",
+          "options": [
+            "No",
+            "Yes temporarily",
+            "Yes — permanently",
+            "Prefer not to say"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "SECTION E — Hormone-Blocking Therapy",
+      "questions": [
+        {
+          "id": "e17_hormone_blocking_advice",
+          "type": "mcq",
+          "question": "17. When you were advised to take hormone-blocking medication (such as Tamoxifen, Letrozole, Anastrozole, Exemestane or other)",
+          "options": [
+            "I accepted and started treatment",
+            "I decided not to start treatment",
+            "I was not offered hormone-blocking treatment",
+            "Prefer not to say"
+          ]
+        },
+        {
+          "id": "e18_why_not_start",
+          "type": "text",
+          "multiline": true,
+          "question": "18. If you decided not to start, please share why (optional)",
+          "placeholder": "Optional"
+        },
+        {
+          "id": "e19_currently_taking_hbt",
+          "type": "mcq",
+          "question": "19. Are you currently taking hormone-blocking therapy?",
+          "options": [
+            "Yes",
+            "No",
+            "Prefer not to say"
+          ]
+        },
+        {
+          "id": "e20_stopped_due_to_side_effects",
+          "type": "mcq",
+          "question": "20. Have you ever stopped hormone-blocking medication due to side effects?",
+          "options": [
+            "No",
+            "Yes - temporarily",
+            "Yes - permanently"
+          ]
+        },
+        {
+          "id": "e21_duration_before_stopping",
+          "type": "mcq",
+          "question": "21. If you stopped — approximately how long had you been taking the medication before stopping?",
+          "options": [
+            "0-6 months",
+            "7-12 months",
+            "1-2 years",
+            "3-5 years",
+            "More than 5 years"
+          ]
+        },
+        {
+          "id": "e22_considered_hrt",
+          "type": "mcq",
+          "question": "22. Did you consider or request HRT to help manage menopause symptoms?",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "SECTION F — Seeking Support",
+      "questions": [
+        {
+          "id": "f23_seeking_support_tim",
+          "type": "mcq",
+          "question": "23. Did you seek support specifically for treatment-induced menopause symptoms?",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "id": "f24_where_seek_support",
+          "type": "mcq",
+          "multiple": true,
+          "other": true,
+          "question": "24. Where did you seek support?",
+          "options": [
+            "Oncologist team",
+            "Breast care nurse",
+            "GP",
+            "Public menopause clinic",
+            "Private menopause clinic",
+            "Therapist or counsellor",
+            "Online resources",
+            "Peer support / community groups",
+            "Family or friends"
+          ]
+        },
+        {
+          "id": "f25_concerns_taken_seriously",
+          "type": "mcq",
+          "question": "25. During consultations about menopause symptoms related to your cancer treatment, did you feel your concerns were taken seriously?",
+          "options": [
+            "Yes — I felt listened to",
+            "Somewhat",
+            "No"
+          ]
+        },
+        {
+          "id": "f26_overall_effectiveness",
+          "type": "mcq",
+          "question": "26. Overall, how effective was the support you accessed? (Effective = helped reduce symptom severity or improved daily functioning.)",
+          "options": [
+            "Effective",
+            "Slightly effective",
+            "Not effective"
+          ]
+        },
+        {
+          "id": "f27a_effective_support_type",
+          "type": "mcq",
+          "other": true,
+          "question": "27a. If you selected \"Effective\", which type of support did you find effective?",
+          "options": [
+            "GP",
+            "Hospital team (e.g. oncologist, breast care nurse)",
+            "Online / digital programme",
+            "Private menopause clinic",
+            "Support group / community"
+          ],
+          "visibleWhen": {
+            "questionId": "f26_overall_effectiveness",
+            "equals": "Effective"
+          }
+        },
+        {
+          "id": "f27b_effective_what_helped",
+          "type": "mcq",
+          "multiple": true,
+          "other": true,
+          "question": "27b. If you selected \"Effective\" what specifically made this support effective for you?",
+          "options": [
+            "It was personalised to my needs",
+            "The provider had expertise in treatment-induced menopause symptoms",
+            "It was offered at the right time (e.g. before or early in treatment)",
+            "Clear explanation of what to expect",
+            "Practical tools I could apply day-to-day, such as nutrition, exercise, and supplements",
+            "Ongoing support (not just one appointment)",
+            "Easy access when I needed help",
+            "Someone who understood my experience",
+            "Helped me feel more in control",
+            "Helped reduce symptoms",
+            "Improved my ability to function (work, daily life)",
+            "Educational programme to help me understand my symptoms and what to expect"
+          ],
+          "visibleWhen": {
+            "questionId": "f26_overall_effectiveness",
+            "equals": "Effective"
+          }
+        },
+        {
+          "id": "f28_no_support_factors",
+          "type": "mcq",
+          "other": true,
+          "question": "28. If you did not access support — what factors influenced that decision?",
+          "options": [
+            "I was not aware support existed",
+            "Waiting times were too long",
+            "I was told symptoms were \"normal\"",
+            "I did not know who to ask",
+            "I could not afford private support",
+            "Concern about medication interactions",
+            "N/A"
+          ],
+          "visibleWhen": {
+            "questionId": "f23_seeking_support_tim",
+            "equals": "No"
+          }
+        }
+      ]
+    },
+    {
+      "heading": "SECTION G — Out-of-Pocket Spending",
+      "questions": [
+        {
+          "id": "g29_oop_spending",
+          "type": "mcq",
+          "question": "29. Are you currently spending money out-of-pocket to manage menopause symptoms?",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "id": "g30_gp_clinic_monthly",
+          "type": "mcq",
+          "question": "30. Approximately how much do you spend per month on private GP or private menopause clinic visits related to menopause symptoms?",
+          "options": [
+            "Below €70/month",
+            "€71-€150/month",
+            "€151-€250/month",
+            "Above €250/month",
+            "N/A"
+          ]
+        },
+        {
+          "id": "g31_supplements_monthly",
+          "type": "mcq",
+          "question": "31. Approximately how much do you spend per month on supplements to help manage treatment-induced menopause symptoms?",
+          "options": [
+            "Less than €15/month",
+            "€16-€25/month",
+            "€26-€35/month",
+            "€36+/month",
+            "N/A"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "SECTION H — Ideal Support Journey",
+      "info": {
+        "paragraphs": [
+          {
+            "text": "This section explores your preferences for an ideal support pathway to help manage early-onset menopause symptoms following cancer treatment. It focuses on key elements such as preparation, access to services, type of support, and ongoing management."
+          }
+        ]
+      },
+      "questions": [
+        {
+          "id": "h32_ideal_prep_support",
+          "type": "mcq",
+          "multiple": true,
+          "other": true,
+          "question": "32. Thinking back to before you started your breast cancer treatment, what support do you wish had been available to help you prepare for menopause symptoms? (Select all that apply)",
+          "options": [
+            "Online preparation programme (self-paced, immediate access, helping you understand what to expect before treatment starts)",
+            "One-to-one with a menopause specialist (integrated within the public cancer care pathway)",
+            "A leaflet provided by the hospital team (e.g. oncologist or breast care nurse) explaining what to expect and how menopause symptoms may affect me",
+            "A support phone line provided by the HSE to speak with a counsellor specialising in breast cancer and treatment-induced menopause",
+            "A support group (online or in-person) with women who have gone through a similar experience"
+          ]
+        },
+        {
+          "id": "h33_ideal_after_treatment_support",
+          "type": "mcq",
+          "multiple": true,
+          "other": true,
+          "question": "33. Thinking back to after you started your breast cancer treatment, what support do you wish had been available to help you with your treatment induced menopause symptoms? (Select all that apply)",
+          "options": [
+            "One-to-one with a menopause specialist (integrated within the public cancer care pathway)",
+            "Personalised online programme (e.g. 8 weeks) designed to help you manage menopause symptoms, feel more in control, and improve day-to-day functioning",
+            "Personalised online programme (e.g. 8 weeks) with optional nurse support (includes ~2 hours of remote nurse guidance)",
+            "A support group (online or in-person) with women who have gone through a similar experience",
+            "A support phone line provided by the HSE to speak with a counsellor specialising in breast cancer and treatment-induced menopause"
+          ]
+        },
+        {
+          "id": "h34_employer_wellbeing_programme",
+          "type": "mcq",
+          "question": "34. If your employer offered a personalised 8-week online programme, including up to 2 hours of nurse support, to help manage menopause symptoms caused by breast cancer treatment, would you use it as part of your wellbeing benefits?",
+          "options": [
+            "Yes",
+            "Maybe",
+            "No"
+          ]
+        },
+        {
+          "id": "h35_insurance_covered_programme",
+          "type": "mcq",
+          "question": "35. If your private health insurance covered a personalised 8-week online programme, including up to 2 hours of nurse support, to support menopause caused by breast cancer treatment, would you use it?",
+          "options": [
+            "Yes",
+            "Maybe",
+            "No"
+          ]
+        },
+        {
+          "id": "h36_hospital_pathway_programme",
+          "type": "mcq",
+          "question": "36. If a personalised 8-week online programme, including up to 2 hours of nurse support, to help manage menopause caused by breast cancer treatment were offered as part of your hospital cancer care pathway, would you use it?",
+          "options": [
+            "Yes",
+            "Maybe",
+            "No"
+          ]
+        },
+        {
+          "id": "h36a_hospital_programme_no_reason",
+          "type": "text",
+          "multiline": true,
+          "question": "36a. If \"No\", please specify the reason (optional)",
+          "placeholder": "Optional",
+          "visibleWhen": {
+            "questionId": "h36_hospital_pathway_programme",
+            "equals": "No"
+          }
+        }
+      ]
+    },
+    {
+      "heading": "SECTION I — Funding & Willingness to Pay",
+      "questions": [
+        {
+          "id": "i37_funding_responsibility",
+          "type": "matrix_mcq",
+          "question": "37. For each programme, who should be responsible for funding access?",
+          "rows": [
+            "Online preparation programme",
+            "Personalised online programme (e.g. 8 weeks), self-paced, without nurse support",
+            "Personalised (e.g. 8-week) online programme with up to 2 hours of nurse support"
+          ],
+          "columns": [
+            "HSE",
+            "Charity",
+            "Private Insurance",
+            "I would pay myself",
+            "Employer/Benefits"
+          ]
+        },
+        {
+          "id": "i38_private_purchase_likelihood",
+          "type": "mcq",
+          "question": "38. If only available privately, how likely would you be to purchase one of these programmes?",
+          "options": [
+            "Very likely",
+            "Likely",
+            "Unsure",
+            "Unlikely"
+          ]
+        },
+        {
+          "id": "i39_price_prep_programme",
+          "type": "mcq",
+          "question": "39. If paying privately, what price range would you consider acceptable for an online preparation programme (self-paced) designed to help you understand and prepare for early-onset menopause resulting from cancer treatment?",
+          "options": [
+            "€3-€9",
+            "€10-€14",
+            "€15-€30",
+            "€31+"
+          ]
+        },
+        {
+          "id": "i40_price_personalised_self_guided",
+          "type": "mcq",
+          "question": "40. If paying privately, what price range would you consider acceptable for a personalised online programme (e.g. 8 weeks, self-guided) designed to help you manage menopause symptoms resulting from breast cancer treatment, feel more in control, and improve your day-to-day functioning?",
+          "options": [
+            "€15-€25",
+            "€26-€45",
+            "€46-€75",
+            "€75+"
+          ]
+        },
+        {
+          "id": "i41_price_personalised_nurse",
+          "type": "mcq",
+          "question": "41. If paying privately, what price range would you consider acceptable for a personalised online programme (e.g. 8 weeks, including up to 2 hours of nurse support) designed to help you manage menopause symptoms resulting from breast cancer treatment, feel more in control, and improve your day-to-day functioning?",
+          "options": [
+            "€170-€180",
+            "€181-€220",
+            "€221-€250",
+            "€251-€300",
+            "€301-€390",
+            "€391+"
+          ]
+        },
+        {
+          "id": "i42_digital_tool_used",
+          "type": "mcq",
+          "question": "42. Are you currently using, or have you previously used, any app, digital tool or programme to manage menopause symptoms?",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "id": "i43_digital_tool_feedback",
+          "type": "text",
+          "multiline": true,
+          "question": "43. If comfortable, please: 1) name the tool or programme you used, 2) indicate whether it was designed for cancer-related menopause, 3) rate how helpful it was (0–3). (0 = Not helpful at all, 3 = Extremely helpful)",
+          "placeholder": "1) …  2) …  3) …"
+        }
+      ]
+    },
+    {
+      "info": {
+        "title": "Thank you for your participation",
+        "paragraphs": [
+          {
+            "html": "<p>Your responses will directly inform the development of support programmes for women managing early-onset menopause following breast cancer treatment.</p><p>If you are interested in learning more or exploring collaboration, please connect with <a href=\"https://www.linkedin.com/in/ana-d-7273b765/\" target=\"_blank\" rel=\"noopener noreferrer\">Ana Dinho | LinkedIn</a>.</p>"
+          }
+        ]
+      },
+      "questions": []
+    }
+  ]
+}
