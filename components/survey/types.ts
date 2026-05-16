@@ -77,6 +77,8 @@ export type SurveyPageInfo = {
 
 /** One screen: optional readable `info`, plus optional `questions`. */
 export type SurveyPage = {
+  /** Legal / discovery intro with consent checkbox; first page commonly. */
+  consentIntro?: boolean;
   info?: SurveyPageInfo;
   /** Section label shown above questions on this page (e.g. “SECTION A — …”). */
   heading?: string;

@@ -3,6 +3,7 @@
 import {
   useCallback,
   useEffect,
+  useId,
   useMemo,
   useRef,
   useState,
@@ -26,6 +27,7 @@ import type {
   SurveyVisibilityRule,
 } from "./types";
 import { isMcqMultiWithOtherAnswer, isMcqWithOtherAnswer } from "./types";
+import { SurveyConsentIntroContent } from "./SurveyIntroConsent";
 
 const OTHER_VALUE = "__survey_other__";
 
@@ -563,6 +565,9 @@ export function Survey({
   );
   const [pageIndex, setPageIndex] = useState(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [introAgreed, setIntroAgreed] = useState(false);
+  const [introConsentError, setIntroConsentError] = useState(false);
+  const consentCheckboxId = useId();
   const formRef = useRef<HTMLFormElement>(null);
 
   const totalPages = pages.length;
@@ -585,6 +590,10 @@ export function Survey({
   const showPager = showBack || showPrimary;
 
   useEffect(() => {
+    if (pageIndex === 0) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
     formRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   }, [pageIndex]);
 
@@ -600,6 +609,7 @@ export function Survey({
   );
 
   const goBack = () => {
+    setIntroConsentError(false);
     setPageIndex((i) => Math.max(0, i - 1));
   };
 
@@ -610,6 +620,11 @@ export function Survey({
   const handleFormSubmit = async (e: FormEvent) => {
     e.preventDefault();
     if (!isLastPage) {
+      if (currentPage?.consentIntro && !introAgreed) {
+        setIntroConsentError(true);
+        return;
+      }
+      setIntroConsentError(false);
       goNext();
       return;
     }
@@ -655,6 +670,17 @@ export function Survey({
       ) : null}
 
       <div className="survey-page" key={pageIndex}>
+        {currentPage?.consentIntro ? (
+          <SurveyConsentIntroContent
+            checkboxId={consentCheckboxId}
+            agreed={introAgreed}
+            showConsentError={introConsentError}
+            onAgreedChange={(next) => {
+              setIntroAgreed(next);
+              if (next) setIntroConsentError(false);
+            }}
+          />
+        ) : null}
         {currentPage?.heading ? (
           <h2 className="survey-page-heading">{currentPage.heading}</h2>
         ) : null}

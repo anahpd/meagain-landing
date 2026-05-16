@@ -2,7 +2,6 @@
 
 import {
   Survey,
-  SurveyIntroConsent,
   buildSurveyDbInsertRow,
   type SurveyAnswers,
   type SurveyDefinition,
@@ -15,7 +14,6 @@ const SURVEY_DEFINITION = surveyDefinition as SurveyDefinition;
 
 export default function SurveyPage() {
   const [complete, setComplete] = useState(false);
-  const [pastIntro, setPastIntro] = useState(false);
 
   const handleSurveySubmit = async (answers: SurveyAnswers) => {
     const row = buildSurveyDbInsertRow(SURVEY_DEFINITION, answers);
@@ -51,22 +49,13 @@ export default function SurveyPage() {
               </p>
             </div>
           </>
-        ) : !pastIntro ? (
-          <div className="survey-route-card survey-route-card--intro">
-            <SurveyIntroConsent
-              onContinue={() => {
-                setPastIntro(true);
-                window.scrollTo({ top: 0, behavior: "smooth" });
-              }}
-            />
-          </div>
         ) : (
           <>
             <header className="survey-route-header">
-              <h1 className="survey-route-title">Help shape MeAgain</h1>
+              <h1 className="survey-route-title">MeAgain Survey</h1>
               <p className="survey-route-lede">
-                Thank you for contributing. Your responses are anonymous;
-                skip any question you prefer.
+                Help shape MeAgain. Thank you for contributing — your responses
+                are anonymous; skip any question you prefer.
               </p>
             </header>
             <div className="survey-route-card">
@@ -74,6 +63,7 @@ export default function SurveyPage() {
                 definition={SURVEY_DEFINITION}
                 onSubmit={handleSurveySubmit}
                 submitLabel="Submit responses"
+                nextLabel="Continue"
                 className="survey-route-form"
               />
             </div>

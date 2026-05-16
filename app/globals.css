@@ -460,10 +460,6 @@ a.nav-cta {
   font-family: var(--font-sans);
 }
 
-.survey-route-card--intro {
-  text-align: left;
-  max-width: min(var(--max-w-survey-card), 42rem);
-}
 
 .survey-intro {
   font-family: var(--font-sans);
@@ -586,23 +582,6 @@ a.nav-cta {
 .survey-intro-consent-text {
   font-weight: 700;
   color: var(--text-main);
-}
-
-.survey-intro-actions {
-  margin-top: 0.25rem;
-  padding-top: 0.5rem;
-  border-top: var(--bw-hairline) solid var(--border);
-}
-
-.survey-intro-actions .survey-submit {
-  width: 100%;
-}
-
-@media (min-width: 480px) {
-  .survey-intro-actions .survey-submit {
-    width: auto;
-    min-width: 12rem;
-  }
 }
 
 .survey-route-form.survey-root {

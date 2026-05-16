@@ -1,19 +1,7 @@
 {
   "pages": [
     {
-      "info": {
-        "title": "MeAgain Survey",
-        "subtitle": "Understanding the Impact of Medically\nInduced Menopause from Breast Cancer Treatment for Women in Ireland",
-        "paragraphs": [
-          {
-            "text": "MeAgain is an early-stage start-up based in Co. Dublin, focused on understanding the impact of medically induced menopause following breast cancer treatment and developing practical support for women affected. All responses are anonymous and will be used to inform service and product design only. All questions are optional. Please do not include personal identifying information in open-text answers. This is an exploratory study and does not provide medical advice."
-          },
-          {
-            "html": "<p>Your responses will directly inform the development of support programmes for women managing early-onset menopause following breast cancer treatment. If you are interested in learning more or exploring collaboration, please connect with <a href=\"https://www.linkedin.com/in/ana-d-7273b765/\" target=\"_blank\" rel=\"noopener noreferrer\">Ana Dinho on LinkedIn</a> or email: <a href=\"mailto:hello@mymeagain.ie\">hello@mymeagain.ie</a></p>"
-          }
-        ],
-        "footer": "Estimated time: 5-8 minutes"
-      },
+      "consentIntro": true,
       "questions": []
     },
     {

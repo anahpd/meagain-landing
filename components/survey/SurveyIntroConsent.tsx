@@ -1,7 +1,5 @@
 "use client";
 
-import { useState } from "react";
-
 const PRIVACY_URL = "https://www.mymeagain.ie/privacy-policy";
 const ANA_LINKEDIN =
   "https://www.linkedin.com/in/ana-d-7273b765/";
@@ -14,37 +12,29 @@ const BULLET_POINTS = [
   "This is a discovery survey — it does not provide medical advice or diagnosis.",
 ] as const;
 
-type SurveyIntroConsentProps = {
-  onContinue: () => void;
+export type SurveyConsentIntroContentProps = {
+  checkboxId: string;
+  agreed: boolean;
+  showConsentError: boolean;
+  onAgreedChange: (next: boolean) => void;
 };
 
-export function SurveyIntroConsent({ onContinue }: SurveyIntroConsentProps) {
-  const [agreed, setAgreed] = useState(false);
-  const [showConsentError, setShowConsentError] = useState(false);
-
-  const handleContinue = () => {
-    if (!agreed) {
-      setShowConsentError(true);
-      return;
-    }
-    setShowConsentError(false);
-    onContinue();
-  };
-
-  const handleAgreedChange = (next: boolean) => {
-    setAgreed(next);
-    if (next) setShowConsentError(false);
-  };
-
+/** Copy + bullets + consent for survey page 1 (used inside {@link Survey}). */
+export function SurveyConsentIntroContent({
+  checkboxId,
+  agreed,
+  showConsentError,
+  onAgreedChange,
+}: SurveyConsentIntroContentProps) {
   return (
     <section
       className="survey-intro"
       aria-labelledby="survey-intro-heading"
     >
-      <h1 id="survey-intro-heading" className="survey-intro-title">
+      <h2 id="survey-intro-heading" className="survey-intro-title">
         Understanding the Impact of Treatment-Induced Menopause Following
         Breast Cancer Treatment
-      </h1>
+      </h2>
 
       <p className="survey-intro-p">
         MeAgain is an early-stage digital health company based in Co. Dublin,
@@ -114,9 +104,9 @@ export function SurveyIntroConsent({ onContinue }: SurveyIntroConsentProps) {
             : "survey-intro-consent-field"
         }
       >
-        <label className="survey-intro-consent" htmlFor="survey-consent-checkbox">
+        <label className="survey-intro-consent" htmlFor={checkboxId}>
           <input
-            id="survey-consent-checkbox"
+            id={checkboxId}
             type="checkbox"
             className="survey-intro-checkbox"
             checked={agreed}
@@ -124,7 +114,7 @@ export function SurveyIntroConsent({ onContinue }: SurveyIntroConsentProps) {
             aria-describedby={
               showConsentError ? "survey-consent-error" : undefined
             }
-            onChange={(e) => handleAgreedChange(e.target.checked)}
+            onChange={(e) => onAgreedChange(e.target.checked)}
           />
           <span className="survey-intro-consent-text">
             I agree to participate in this survey. I understand that my
@@ -139,16 +129,6 @@ export function SurveyIntroConsent({ onContinue }: SurveyIntroConsentProps) {
             Please tick the box above to continue.
           </p>
         ) : null}
-      </div>
-
-      <div className="survey-intro-actions">
-        <button
-          type="button"
-          className="survey-submit"
-          onClick={handleContinue}
-        >
-          Continue to survey
-        </button>
       </div>
     </section>
   );
