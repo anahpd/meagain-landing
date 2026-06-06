@@ -174,8 +174,7 @@ export default function Home() {
         </section>
 
         <section className="section">
-          <div className="section-tag">Supported by</div>
-          <h2>Collaboration</h2>
+          <div className="section-tag"> Expert input & support by</div>
           <div className="trust-row">
             <div className="trust-badge">
               <strong>Beaumont Hospital &amp; RCSI</strong>
